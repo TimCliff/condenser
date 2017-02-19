@@ -4,11 +4,11 @@ Please read these instructions before submitting issues to the Steemit.com GitHu
 
 ## Bug Reports
 
-If there is an existing feature that is not working correctly, or a glitch in the website that is impacting user behaviour - please open an issue to report variance. Include as much relevant information as you can, including screen shots and steps to reproduce the issue.
+If there is an existing feature that is not working correctly, or a glitch in the website that is impacting user behaviour - please open an issue to report variance. Include as much relevant information as you can, including screen shots and steps to reproduce the issue. Please do a keyword search to see if an issue already exists before creating a new issue.
 
-## Technical Support and Login Issues
+## Technical Support and Signup/Login Issues
 
-If you are having trouble using the website but it is not an error with the website (this includes login issues), do **not** open a GitHub issue. Please request help from the users in the [steemit.chat help](https://steemit.chat/channel/help) channel.
+If you are having trouble using the website but it is not an error with the website (this includes signup/login issues), do **not** open a GitHub issue. Please request help from the users in the [steemit.chat help](https://steemit.chat/channel/help) channel.
 
 ## Enhancement Suggestions
 
