@@ -26,7 +26,7 @@ You can earn digital tokens on Steemit by:
 
 **Voting and curating** - If you discover a post and upvote it before it becomes popular, you can earn a curation reward. The reward amount will depend on the amount of STEEM Power you have.
 
-**Purchasing** - Users can purchase STEEM or Steem Dollar tokens directly through the Steemit wallet using Bitcoin, Ether, or BitShares tokens. They are also available from other markets and exchanges including Poloniex, Bittrex, Shapeshift.io, and Changelly. STEEM tokens that are powered up to STEEM Power earn a small amount of interest for holding.
+**Purchasing** - Users can purchase STEEM or Steem Dollar tokens directly through the Steemit wallet using Bitcoin, Ether, or BitShares tokens. They are also available from other markets and exchanges including BlockTrades, Poloniex, Bittrex, Shapeshift.io, and Changelly. STEEM tokens that are powered up to STEEM Power earn a small amount of interest for holding.
 
 ## Where do the tokens come from?
 
@@ -451,7 +451,7 @@ Other than making a post and making sales manually, there is no interface for se
 
 STEEM and SBD tokens are readily tradable to bitcoin, which is readily tradable to the local currency of your choice.
 
-There are several guides that have been posted by users in the community for using various exchanges to withdraw STEEM and SBD tokens. Please read the <a href="">disclaimer</a> before using any of these guides to withdraw your coins. The users, guides, and exchanges listed in the guides are not endorsed by Steemit, Inc. Use the guides below at your own risk. 
+There are several guides that have been posted by users in the community for using various exchanges to withdraw STEEM and SBD tokens. Please read the <a href="/faq.html#Disclaimer">disclaimer</a> before using any of these guides to withdraw your coins. The users, guides, and exchanges listed in the guides are not endorsed by Steemit, Inc. Use the guides below at your own risk. 
 
 It is recommended that you withdraw a small amount first, to verify it works before withdrawing a larger amount.
 
@@ -862,10 +862,6 @@ https://www.facebook.com/steemit/
 
 https://twitter.com/steemit
 
-## Steemithelp.net
-
-<<<Insert some text here or delete?>>>
-
 ## What is the Steem Whitepaper and what is its purpose?
 
 The Steem Whitepaper was written to describe the mechanics of the token system that makes decentralized content incentives and distribution possible in a way that can improve web technologies across the board. It is also applicable to Steemit, the first website to plug into the Steem blockchain. Users who have read the Steem Whitepaper will better understand how their interactions with Steemit are interactions with Steem, the decentralized network.
@@ -880,11 +876,12 @@ If you post your question in the <a href="https://steemit.chat/channel/help">ste
 
 You can also create a post on Steemit.com with the tag #help, and someone in the community may be able to answer it.
 
+<a class="anchor" name="Disclaimer"></a>
 # Disclaimer
 
 ## Third Party References and User Links
 
-PeerHub, BlockTrades, Poloniex, Bittrex, Changelly, Shapeshift.io, Steemit.chat, SteemTools, AnonSteem, [[[add more here]]] are third party applications/services, and are not owned or maintained by Steemit, Inc. Their listing here does not constitute and endorsement or recommendation on behalf of Steemit, Inc.
+PeerHub, BlockTrades, Poloniex, Bittrex, Changelly, Shapeshift.io, Coinbase, Localbitcoins, Steemit.chat, SteemTools, and AnonSteem are third party applications/services, and are not owned or maintained by Steemit, Inc. Their listing here does not constitute and endorsement or recommendation on behalf of Steemit, Inc.
 
 All links to user posts were created by our users and do not necessarily represent the views of Steemit, Inc. or its management. Their listing here does not constitute and endorsement or recommendation on behalf of Steemit, Inc.
 
