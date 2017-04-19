@@ -8,7 +8,7 @@
 - <a href="/faq.html#How_does_Steemit_work">How does Steemit work?</a>
 - <a href="/faq.html#How_does_Steemit_differ_from_other_social_media_websites">How does Steemit differ from other social media websites?</a>
 - <a href="/faq.html#Does_it_cost_anything_to_post__comment__or_vote">Does it cost anything to post, comment, or vote?</a>
-- <a href="/faq.html#Can_I_earn_digital_tokens_on_Steemit_How">Can I earn digital tokens on Steemit?</a> How?</a>
+- <a href="/faq.html#Can_I_earn_digital_tokens_on_Steemit_How">Can I earn digital tokens on Steemit? How?</a>
 - <a href="/faq.html#Where_do_the_tokens_come_from">Where do the tokens come from?</a>
 - <a href="/faq.html#Where_does_the_value_come_from">Where does the value come from?</a>
 - <a href="/faq.html#Why_are_people_getting_vastly_different_rewards">Why are people getting vastly different rewards?</a>
