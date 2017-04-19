@@ -1,7 +1,5 @@
-# Steemit FAQ 
-
 <a class="anchor" name="Table_of_Contents"></a>
-## Table of Contents
+# Table of Contents
 
 ### General
 - <a href="/faq.html#What_is_Steemit_com">What is Steemit.com?</a>
