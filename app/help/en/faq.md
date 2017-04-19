@@ -1,6 +1,184 @@
-# Table of Contents
+# Steemit FAQ 
 
-[The TOC will be added once all the questions are finalized]
+<a class="anchor" name="Table_of_Contents"></a>
+## Table of Contents
+
+### General
+- <a href="/faq.html#What_is_Steemit_com">What is Steemit.com?</a>
+- <a href="/faq.html#How_does_Steemit_work">How does Steemit work?</a>
+- <a href="/faq.html#How_does_Steemit_differ_from_other_social_media_websites">How does Steemit differ from other social media websites?</a>
+- <a href="/faq.html#Does_it_cost_anything_to_post__comment__or_vote">Does it cost anything to post, comment, or vote?</a>
+- <a href="/faq.html#Can_I_earn_digital_tokens_on_Steemit_How">Can I earn digital tokens on Steemit?</a> How?</a>
+- <a href="/faq.html#Where_do_the_tokens_come_from">Where do the tokens come from?</a>
+- <a href="/faq.html#Where_does_the_value_come_from">Where does the value come from?</a>
+- <a href="/faq.html#Why_are_people_getting_vastly_different_rewards">Why are people getting vastly different rewards?</a>
+
+### Accounts
+- <a href="/faq.html#How_do_I_create_an_account">How do I create an account?</a>
+- <a href="/faq.html#What_information_do_I_need_to_provide_in_order_to_create_an_account">What information do I need to provide in order to create an account?</a>
+- <a href="/faq.html#Why_do_I_need_to_provide_my_email_and_phone_number">Why do I need to provide my email and phone number?</a>
+- <a href="/faq.html#Can_I_create_a_Steem_account_without_an_email_and_phone_number">Can I create a Steem account without an email and phone number?</a>
+- <a href="/faq.html#What_are_other_ways_to_create_an_account_on_the_blockchain_besides_using_Steemit_com">What are other ways to create an account on the blockchain besides using Steemit.com?</a>
+- <a href="/faq.html#It_is_not_letting_me_create_an_account_with_my_phone_number__What_should_I_do">It is not letting me create an account with my phone number. What should I do?</a>
+- <a href="/faq.html#What_happens_if_my_email_or_phone_number_changes">What happens if my email or phone number changes?</a>
+- <a href="/faq.html#Can_I_delete_or_deactivate_my_account">Can I delete or deactivate my account?</a>
+
+### Community
+- <a href="/faq.html#Is_there_an_Etiquette_Guide_for_Steemit">Is there an Etiquette Guide for Steemit?</a>
+- <a href="/faq.html#Am_I_required_to_verify_my_identity">Am I required to verify my identity?</a>
+- <a href="/faq.html#What_are_whales__dolphins_and_minnows">What are whales, dolphins and minnows?</a>
+
+### Site Navigation
+- <a href="/faq.html#How_do_I_upvote_a_post_or_comment">How do I upvote a post or comment?</a>
+- <a href="/faq.html#What_do_the_Home__New__Hot__Trending__and_Promoted_links_show">What do the Home, New, Hot, Trending, and Promoted links show?</a>
+- <a href="/faq.html#What_information_is_available_in_my_account_menu">What information is available in my account menu?</a>
+- <a href="/faq.html#How_do_I_see_my_recent_rewards">How do I see my recent rewards?</a>
+- <a href="/faq.html#What_information_is_shown_in_my_wallet">What information is shown in my wallet?</a>
+- <a href="/faq.html#How_do_I_transfer_my_STEEM_or_Steem_Dollars_into_savings">How do I transfer my STEEM or Steem Dollars into savings?</a>
+- <a href="/faq.html#How_do_I_send_money_to_another_user">How do I send money to another user?</a>
+- <a href="/faq.html#Will_I_receive_notifications_when_there_is_activity_with_my_account">Will I receive notifications when there is activity with my account?</a>
+- <a href="/faq.html#What_is_shown_in_my_profile">What is shown in my profile?</a>
+- <a href="/faq.html#How_do_I_change_my_avatar_image_and_other_profile_information">How do I change my avatar image and other profile information?</a>
+- <a href="/faq.html#How_can_I_control_whether_I_see__Not_Safe_For_Work___NSFW__content">How can I control whether I see "Not Safe For Work" (NSFW) content?</a>
+- <a href="/faq.html#How_do_I_search_for_content">How do I search for content?</a>
+- <a href="/faq.html#Can_I_see_which_users_I_have_muted">Can I see which users I have muted?</a>
+- <a href="/faq.html#Can_I_see_which_users_have_muted_me">Can I see which users have muted me?</a>
+- <a href="/faq.html#Can_I_see_the_list_of_users_I_am_following__and_who_is_following_me">Can I see the list of users I am following, and who is following me?</a>
+- <a href="/faq.html#What_languages_are_supported">What languages are supported?</a>
+
+### Posting
+- <a href="/faq.html#What_can_users_post_to_Steemit">What can users post to Steemit?</a>
+- <a href="/faq.html#What_are_the_different_choices_for_post_rewards__50__50___Power_Up_100___Decline_Payout">What are the different choices for post rewards (50%/50%, Power Up 100%, Decline Payout)?</a>
+- <a href="/faq.html#How_do_I_add_images_and_photos_to_my_posts">How do I add images and photos to my posts?</a>
+- <a href="/faq.html#How_do_I_add_videos_to_my_posts">How do I add videos to my posts?</a>
+- <a href="/faq.html#Is_there_a_way_I_can_make_my_images_smaller">Is there a way I can make my images smaller?</a>
+- <a href="/faq.html#What_are_tags">What are tags?</a>
+- <a href="/faq.html#What_tags_should_I_use">What tags should I use?</a>
+- <a href="/faq.html#How_many_tags_can_I_use">How many tags can I use?</a>
+- <a href="/faq.html#How_do_I_format_text_in_Markdown">How do I format text in Markdown?</a>
+- <a href="/faq.html#How_often_can_I_post">How often can I post?</a>
+- <a href="/faq.html#How_long_can_my_post_be">How long can my post be?</a>
+- <a href="/faq.html#If_posting_in_a_language_other_than_English__how_will_I_get_recognized">If posting in a language other than English, how will I get recognized?</a>
+- <a href="/faq.html#Can_I_delete_something_I_posted">Can I delete something I posted?</a>
+- <a href="/faq.html#What_does__Promoting__a_post_do">What does "Promoting" a post do?</a>
+- <a href="/faq.html#How_do_I_promote_a_post">How do I promote a post?</a>
+
+### Comments
+- <a href="/faq.html#Can_I_earn_digital_tokens_for_commenting">Can I earn digital tokens for commenting?</a>
+- <a href="/faq.html#How_often_can_I_comment">How often can I comment?</a>
+
+### Economics
+- <a href="/faq.html#Where_do_the_new_STEEM_tokens_come_from">Where do the new STEEM tokens come from?</a>
+- <a href="/faq.html#How_many_new_tokens_are_generated_by_the_blockchain">How many new tokens are generated by the blockchain?</a>
+- <a href="/faq.html#How_are_the_new_tokens_distributed">How are the new tokens distributed?</a>
+- <a href="/faq.html#What_is_the_reward_pool">What is the reward pool?</a>
+- <a href="/faq.html#How_is_the_reward_pool_split_between_authors_and_curators">How is the reward pool split between authors and curators?</a>
+- <a href="/faq.html#Will_the_reward_pool_pay_out_more_or_less_depending_on_who_votes">Will the reward pool pay out more or less depending on who votes?</a>
+- <a href="/faq.html#Why_do_the_earnings_for_my_post_go_up_or_down">Why do the earnings for my post go up or down?</a>
+- <a href="/faq.html#When_can_I_claim_my_rewards">When can I claim my rewards?</a>
+- <a href="/faq.html#What_is_the_difference_between_STEEM__STEEM_Power__and_Steem_Dollars">What is the difference between STEEM, STEEM Power, and Steem Dollars?</a>
+- <a href="/faq.html#What_determines_the_price_of_STEEM">What determines the price of STEEM?</a>
+- <a href="/faq.html#How_do_I_get_more_STEEM_Power">How do I get more STEEM Power?</a>
+- <a href="/faq.html#What_is_powering_up_and_down">What is powering up and down?</a>
+- <a href="/faq.html#Will_1_Steem_Dollar_always_be_worth__1_00_USD">Will 1 Steem Dollar always be worth $1.00 USD?</a>
+- <a href="/faq.html#How_do_Steem_Dollar_to_STEEM_conversions_work">How do Steem Dollar to STEEM conversions work?</a>
+- <a href="/faq.html#Is_there_a_way_for_me_to_convert_my_Steem_Dollars_to_STEEM_without_waiting_3_5_days">Is there a way for me to convert my Steem Dollars to STEEM without waiting 3.5 days?</a>
+- <a href="/faq.html#What_can_I_do_with_my_STEEM_tokens">What can I do with my STEEM tokens?</a>
+- <a href="/faq.html#What_can_I_do_with_my_SBD_tokens">What can I do with my SBD tokens?</a>
+- <a href="/faq.html#Can_I_sell_goods_and_services_on_Steemit">Can I sell goods and services on Steemit?</a>
+- <a href="/faq.html#How_can_I_withdraw_my_STEEM_or_SBD_coins">How can I withdraw my STEEM or SBD coins?</a>
+- <a href="/faq.html#Will_I_get_a_1099_from_Steemit">Will I get a 1099 from Steemit?</a>
+- <a href="/faq.html#How_much_are_the_transaction_fees_for_sending_tokens_to_other_users">How much are the transaction fees for sending tokens to other users?</a>
+- <a href="/faq.html#Are_there_fees_for_Powering_Up__Powering_Down__trading_on_the_internal_market__or_converting_SBD_to_STEEM">Are there fees for Powering Up, Powering Down, trading on the internal market, or converting SBD to STEEM?</a>
+- <a href="/faq.html#How_long_does_it_take_to_transfer_STEEM_or_SBD_tokens_between_users">How long does it take to transfer STEEM or SBD tokens between users?</a>
+
+### Voting and Curating
+- <a href="/faq.html#What_is_my_voting_power">What is my voting power?</a>
+- <a href="/faq.html#How_many_times_can_I_vote_without_depleting_my_voting_power">How many times can I vote without depleting my voting power?</a>
+- <a href="/faq.html#Can_I_vote_with_less_than_100__of_my_voting_strength">Can I vote with less than 100% of my voting strength?</a>
+- <a href="/faq.html#Where_can_I_check_my_voting_power">Where can I check my voting power?</a>
+- <a href="/faq.html#What_determines_how_much_of_the_curation_reward_goes_to_the_author_versus_curators">What determines how much of the curation reward goes to the author versus curators?</a>
+- <a href="/faq.html#Can_I_get_curation_rewards_for_upvoting_comments">Can I get curation rewards for upvoting comments?</a>
+- <a href="/faq.html#Do_I_get_curation_rewards_for_downvoting_posts_or_comments">Do I get curation rewards for downvoting posts or comments?</a>
+- <a href="/faq.html#Why_don_t_my_upvotes_have_an_effect_on_a_post_s_rewards">Why don't my upvotes have an effect on a post's rewards?</a>
+- <a href="/faq.html#Is_there_a_way_to_make_my_votes_count_for_more">Is there a way to make my votes count for more?</a>
+- <a href="/faq.html#What_are_the_valid_reasons_for_downvoting">What are the valid reasons for downvoting?</a>
+- <a href="/faq.html#Does_a_downvote_mean_that_I_did_something_wrong">Does a downvote mean that I did something wrong?</a>
+- <a href="/faq.html#Will_a_downvote_hurt_my_reputation">Will a downvote hurt my reputation?</a>
+- <a href="/faq.html#What_is_the_difference_between_a_downvote_and_a_flag">What is the difference between a downvote and a flag?</a>
+
+### Plagiarism, Spam, and Abuse
+- <a href="/faq.html#What_are_Steemit_s_policies_on_plagiarism_and_spam">What are Steemit’s policies on plagiarism and spam?</a>
+- <a href="/faq.html#Is_it_okay_to_use_random_pictures_from_the_internet">Is it okay to use random pictures from the internet?</a>
+- <a href="/faq.html#What_is_Steemcleaners">What is Steemcleaners?</a>
+- <a href="/faq.html#What_is__cheetah">What is @cheetah?</a>
+- <a href="/faq.html#Where_do_I_report_a_post_or_comment_that_contains_plagiarism__spam__or_abuse">Where do I report a post or comment that contains plagiarism, spam, or abuse?</a>
+
+### Reputation
+- <a href="/faq.html#What_is_Reputation">What is Reputation?</a>
+- <a href="/faq.html#How_is_the_Reputation_score_measured">How is the Reputation score measured?</a>
+- <a href="/faq.html#How_do_I_improve_my_reputation_score">How do I improve my reputation score?</a>
+- <a href="/faq.html#What_causes_my_reputation_score_to_go_down">What causes my reputation score to go down?</a>
+- <a href="/faq.html#Why_does_my_reputation_score_matter">Why does my reputation score matter?</a>
+
+### Followers, Feeds, and Resteem
+- <a href="/faq.html#What_is_Resteeming">What is Resteeming?</a>
+- <a href="/faq.html#Can_I_share_on_other_social_media">Can I share on other social media?</a>
+
+### Blockchain
+- <a href="/faq.html#What_is_a_blockchain">What is a blockchain?</a>
+- <a href="/faq.html#What_is_the_Steem_blockchain">What is the Steem blockchain?</a>
+- <a href="/faq.html#What_is_the_difference_between_Steem_and_Steemit">What is the difference between Steem and Steemit?</a>
+- <a href="/faq.html#How_is_Steem_different_from_Bitcoin">How is Steem different from Bitcoin?</a>
+- <a href="/faq.html#What_is_the_difference_between_Proof_of_Work__Proof_of_Stake__and_Delegated_Proof_of_Stake">What is the difference between Proof of Work, Proof of Stake, and Delegated Proof of Stake?</a>
+- <a href="/faq.html#How_often_does_the_Steem_blockchain_produce_a_new_block">How often does the Steem blockchain produce a new block?</a>
+- <a href="/faq.html#Is_there_a_way_to_see_the_raw_data_that_is_stored_in_the_blockchain">Is there a way to see the raw data that is stored in the blockchain?</a>
+- <a href="/faq.html#Where_can_I_find_the_information_for_the_official_launch_of_the_blockchain">Where can I find the information for the official launch of the blockchain?</a>
+- <a href="/faq.html#Can_I_mine_STEEM">Can I mine STEEM?</a>
+
+### Steemit, Inc.
+- <a href="/faq.html#Who_are_the_Steemit_co_founders">Who are the Steemit co-founders?</a>
+- <a href="/faq.html#How_does_Steemit__Inc__earn_money">How does Steemit, Inc. earn money?</a>
+- <a href="/faq.html#Can_I_invest_in_Steemit">Can I invest in Steemit?</a>
+- <a href="/faq.html#What_does_Steemit_s_development_roadmap_look_like">What does Steemit’s development roadmap look like?</a>
+- <a href="/faq.html#Am_I_allowed_to_use_the_Steemit_logo">Am I allowed to use the Steemit logo?</a>
+- <a href="/faq.html#Can_I_purchase_official_Steemit_merchandise">Can I purchase official Steemit merchandise?</a>
+- <a href="/faq.html#Did_Steemit__pre_mine__tokens">Did Steemit "pre-mine" tokens?</a>
+- <a href="/faq.html#What_is_the_Steemit_Privacy_Policy">What is the Steemit Privacy Policy?</a>
+
+### Security
+- <a href="/faq.html#How_can_I_keep_my_Steem_account_secure">How can I keep my Steem account secure?</a>
+- <a href="/faq.html#Why_should_I_be_careful_with_my_master_password">Why should I be careful with my master password?</a>
+- <a href="/faq.html#Why_is_the_master_password_a_long_string_of_gibberish">Why is the master password a long string of gibberish?</a>
+- <a href="/faq.html#What_are_my_different_keys_for">What are my different keys for?</a>
+- <a href="/faq.html#How_can_I_extract_these_keys_from_my_master_password">How can I extract these keys from my master password?</a>
+- <a href="/faq.html#What_do_I_do_if_I_lost_my_password_keys">What do I do if I lost my password/keys?</a>
+- <a href="/faq.html#Are_my_STEEM_and_Steem_Dollar_tokens_insured_in_the_event_of_a_hack_or_if_someone_takes_over_my_account">Are my STEEM and Steem Dollar tokens insured in the event of a hack or if someone takes over my account?</a>
+- <a href="/faq.html#What_should_I_do_if_I_discover_that_someone_hacked_my_account">What should I do if I discover that someone hacked my account?</a>
+- <a href="/faq.html#How_does_the_recovery_process_work">How does the recovery process work?</a>
+- <a href="/faq.html#How_do_I_report_a_security_vulnerability">How do I report a security vulnerability?</a>
+
+### Developers
+- <a href="/faq.html#Are_the_Steem_blockchain_and_Steemit_com_code_open_source">Are the Steem blockchain and Steemit.com code open-source?</a>
+- <a href="/faq.html#Is_there_a_Github_page_for_Steemit_com">Is there a Github page for Steemit.com?</a>
+- <a href="/faq.html#Is_there_a_Github_page_for_the_Steem_blockchain">Is there a Github page for the Steem blockchain?</a>
+- <a href="/faq.html#What_is_available_for_developers_interested_in_Steem_and_Steemit">What is available for developers interested in Steem and Steemit?</a>
+- <a href="/faq.html#How_do_I_use_cli_wallet">How do I use cli_wallet?</a>
+
+### Witnesses
+- <a href="/faq.html#What_are_Steem_witnesses">What are Steem witnesses?</a>
+- <a href="/faq.html#How_can_I_vote_for_witnesses">How can I vote for witnesses?</a>
+- <a href="/faq.html#How_many_witnesses_can_I_vote_for">How many witnesses can I vote for?</a>
+
+### Miscellaneous
+- <a href="/faq.html#What_third_party_tools_are_there_for_Steemit">What third-party tools are there for Steemit?</a>
+- <a href="/faq.html#Is_there_an_official_Steemit_Facebook_page">Is there an official Steemit Facebook page?</a>
+- <a href="/faq.html#Is_there_an_official_Steemit_Twitter_account">Is there an official Steemit Twitter account?</a>
+- <a href="/faq.html#What_is_the_Steem_Whitepaper_and_what_is_its_purpose">What is the Steem Whitepaper and what is its purpose?</a>
+- <a href="/faq.html#Where_can_I_ask_for_help_if_my_question_was_not_answered_here">Where can I ask for help if my question was not answered here?</a>
+
+### Disclaimer
+- <a href="/faq.html#Third_Party_References_and_User_Links">Third Party References and User Links
 
 # General
 
