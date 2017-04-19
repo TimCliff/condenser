@@ -12,7 +12,7 @@ Steemit has redefined social media by building a living, breathing, and growing 
 
 ## How does Steemit work?
 
-Steemit is attached to the Steem blockchain and cryptocurrency. Everyday the best content, as measured by upvotes, is rewarded with cryptocurrency coming from inflation.
+Steemit is a social media platform that works by having the crowd reward the crowd for their content. It does this thanks to the Steem blockchain and cryptocurrency; Steem is 'minted' daily and distributed to content producers according to the votes they get.
 
 ## How does Steemit differ from other social media websites?
 
