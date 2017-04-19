@@ -6,13 +6,17 @@
 
 ## What is Steemit.com?
 
-Steemit is a social network which empowers people for their contributions by rewarding them for their time, effort and creativity through digital tokens called STEEM.
+Steemit is a social network and content rewards platform that makes the crowd the beneficiaries of the attention economy. It does this be rewarding users with STEEM.
 
 Steemit has redefined social media by building a living, breathing, and growing social economy; a community where users are getting rewarded for sharing their voice.
 
-## How does Steemit differ from other social media sites?
+## How does Steemit work?
 
-On other social media sites, users spend time adding their unique value to central, corporate-owned platforms. Steemit is built on top of a public and decentralized blockchain network called **Steem**. Users have the ability to earn digital STEEM and Steem Dollar tokens, and STEEM Power which gives users stake and influence in the platform.
+Steemit is attached to the Steem blockchain and cryptocurrency. Everyday the best content, as measured by upvotes, is rewarded with cryptocurrency coming from inflation.
+
+## How does Steemit differ from other social media websites?
+
+Most social media sites extract value from their userbase for the benefit of shareholders alone. Steemit is different, it's a new kind of attention economy. By connecting with the Steem blockchain (which is decentralized and controlled by the crowd), Steemit users receive all the benefits and rewards for their attention.
 
 ## Does it cost anything to post, comment, or vote?
 
@@ -34,13 +38,13 @@ The Steem network continually creates digital tokens to reward content creators 
 
 ## Where does the value come from?
 
-At its root, Steem is simply a points system. However, because this points system is blockchain-based, the points can be traded on markets as tokens. The market speculation makes the value of the tokens go up and down based on their supply and demand.
+At its root, Steem is simply a points system. However, because this points system is blockchain-based, the points can be traded on markets as tokens. People buy and sell these tokens, and many hold in anticipation of increased purchasing power for various Steem-related services.
 
-By analogy, Steem is a game system where users compete for attention and rewards by bringing content and adding value to the platform. The rewards people earn are tokens that have real market value and are readily tradable. It is similar to how someone playing a video game could obtain a limited item or currency by playing the game. If the currency or items are transferable between users, then they can sell or buy them on game item markets.
+By analogy, Steem is a game system where users compete for attention and rewards by bringing content and adding value to the platform. The rewards people earn are tokens that have market value and are readily tradable. It is similar to how someone playing a video game could obtain a limited item or currency by playing the game. If the currency or items are transferable between users, then they can sell or buy them on game item markets.
 
-## Why are my posts not earning as much as I expect?
+## Why are people getting vastly different rewards?
 
-Steemit is not a "get rich quick" scheme. While it is possible to post content that goes viral quickly and earn a lot of rewards on a single post, this is not typical for most users. 
+Steemit is not a "get rich quick" scheme. While it is possible to post content that goes viral quickly and earn a lot of rewards on a single post, this is not typical for most users.
 
 Most of the authors that you see earning high rewards are users that have spent a lot of time in the network building followings, making connections with others, and developing a reputation for bringing high quality content.
 
