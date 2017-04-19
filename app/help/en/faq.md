@@ -325,7 +325,7 @@ These are terms that people use to describe Steemit users with different amounts
 <a class="anchor" name="How_do_I_upvote_a_post_or_comment"></a>
 ## How do I upvote a post or comment?
 
-To upvote a post or comment, click on the "upvote" icon at the bottom of the post/comment. (Insert Icon)
+To upvote a post or comment, click on the "upvote" icon at the bottom of the post/comment. <img src="">
 
 <a href="/faq.html#Table_of_Contents">Table of Contents</a>
 <a class="anchor" name="What_do_the_Home__New__Hot__Trending__and_Promoted_links_show"></a>
@@ -348,7 +348,7 @@ These are various ways to sort Steem posts.
 ## What information is available in my account menu?
 
 You can get to your account menu by clicking on the avatar icon in the top-right corner of a Steemit.com page. 
-(Insert Icon)
+<img src="https://github.com/steemit/condenser/blob/master/app/assets/icons/person.svg" height="48px" width="48px">
 
 **Feed** - Here is where you go to see the most recent posts from the people you follow.
 
