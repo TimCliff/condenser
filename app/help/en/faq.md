@@ -141,7 +141,7 @@
 - <a href="/faq.html#What_is_a_blockchain">What is a blockchain?</a>
 - <a href="/faq.html#What_is_the_Steem_blockchain">What is the Steem blockchain?</a>
 - <a href="/faq.html#What_is_the_difference_between_Steem_and_Steemit">What is the difference between Steem and Steemit?</a>
-- <a href="/faq.html#How_is_Steem_different_from_bitcoin">How is Steem different from bitcoin?</a>
+- <a href="/faq.html#How_is_Steem_different_from_Bitcoin">How is Steem different from Bitcoin?</a>
 - <a href="/faq.html#What_is_the_difference_between_Proof_of_Work__Proof_of_Stake__and_Delegated_Proof_of_Stake">What is the difference between Proof of Work, Proof of Stake, and Delegated Proof of Stake?</a>
 - <a href="/faq.html#How_often_does_the_Steem_blockchain_produce_a_new_block">How often does the Steem blockchain produce a new block?</a>
 - <a href="/faq.html#Is_there_a_way_to_see_the_raw_data_that_is_stored_in_the_blockchain">Is there a way to see the raw data that is stored in the blockchain?</a>
@@ -642,7 +642,7 @@ There is a 20 second wait time in between comments to limit spam.
 <a class="anchor" name="Where_do_the_new_STEEM_tokens_come_from"></a>
 ## Where do the new STEEM tokens come from?
 
-Blockchains like Steem and bitcoin produce new tokens each time a block is produced. Unlike bitcoin, where all of the new coins go to the block producers (called miners), the Steem blockchain allocates a majority of the new tokens to a reward fund. The reward fund gives users tokens for participating in the platform.
+Blockchains like Steem and Bitcoin produce new tokens each time a block is produced. Unlike Bitcoin, where all of the new coins go to the block producers (called miners), the Steem blockchain allocates a majority of the new tokens to a reward fund. The reward fund gives users tokens for participating in the platform.
 
 <a href="/faq.html#Table_of_Contents_Economics">&#11025;</a>
 <a class="anchor" name="How_many_new_tokens_are_generated_by_the_blockchain"></a>
