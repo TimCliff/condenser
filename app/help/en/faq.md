@@ -797,7 +797,7 @@ It is recommended that you withdraw a small amount first, to verify it works bef
 #### Sell Steem Dollars via Poloniex
 https://steemit.com/steemit/@ash/steemit-how-to-sell-steem-dollars-via-poloniex-newbie-friendly
 
-#### Withdraw Steem Dollars to a bitcoin address
+#### Withdraw Steem Dollars to a Bitcoin address
 https://steemit.com/steem-help/@piedpiper/how-to-withdraw-your-steem-dollars-in-less-that-a-minute
 
 #### Convert Steem Dollars to a country’s currency and withdraw to a bank account
@@ -1056,8 +1056,8 @@ Steem is the name of the blockchain that stores all of the data and transactions
 Steemit is a front end web interface to interact with the blockchain, and view the blockchain data.
 
 <a href="/faq.html#Table_of_Contents_Blockchain">&#11025;</a>
-<a class="anchor" name="How_is_Steem_different_from_bitcoin"></a>
-## How is Steem different from bitcoin?
+<a class="anchor" name="How_is_Steem_different_from_Bitcoin"></a>
+## How is Steem different from Bitcoin?
 
 On a technical level, the two networks rely on the same model of a blockchain, but are built upon different technologies and codebase. Steem is based on a new state-of-the-art blockchain technology called Graphene, which uses "witnesses" instead of "miners" to produce blocks. 
 
@@ -1089,7 +1089,7 @@ Yes. The blockchain data can be viewed in different ways with third-party tools 
 <a class="anchor" name="Where_can_I_find_the_information_for_the_official_launch_of_the_blockchain"></a>
 ## Where can I find the information for the official launch of the blockchain?
 
-The original launch of Steem was on March 23, 2016, announced on <a href="https://bitcointalk.org/index.php?topic=1408726.0">bitcointalk.org</a>. There was a bug found in the original code though, and a majority of the stakeholders agreed that it would be easier to fix via a re-launch than a hardfork. The blockchain was reset and officially re-launched on March 24, 2016, via <a href="https://bitcointalk.org/index.php?topic=1410943.0">bitcointalk.org</a>.
+The original launch of Steem was on March 23, 2016, announced on <a href="https://bitcointalk.org/index.php?topic=1408726.0">Bitcointalk.org</a>. There was a bug found in the original code though, and a majority of the stakeholders agreed that it would be easier to fix via a re-launch than a hardfork. The blockchain was reset and officially re-launched on March 24, 2016, via <a href="https://bitcointalk.org/index.php?topic=1410943.0">Bitcointalk.org</a>.
 
 <a href="/faq.html#Table_of_Contents_Blockchain">&#11025;</a>
 <a class="anchor" name="Can_I_mine_STEEM"></a>
@@ -1164,7 +1164,7 @@ Here are some of the key take-aways:
 
 To secure a portion of the tokens for themselves, the founders released the blockchain with very little information other than the code itself. This allowed them mine it before many others got too interested in it. The other miners that did get involved early on were the ones that took the time to read and understand the code, and saw the potential of what the platform could become. This was successful, and a majority of the coins were mined by the Steemit development team.
 
-The STEEM tokens mined by Steemit, Inc were not "pre-mined". All mining took place after the coin was officially and publicly announced on <a href="https://bitcointalk.org/index.php?topic=1410943.0">bitcointalk.org</a>.
+The STEEM tokens mined by Steemit, Inc were not "pre-mined". All mining took place after the coin was officially and publicly announced on <a href="https://bitcointalk.org/index.php?topic=1410943.0">Bitcointalk.org</a>.
 
 <a href="/faq.html#Table_of_Contents_Steemit__Inc">&#11025;</a>
 <a class="anchor" name="What_is_the_Steemit_Privacy_Policy"></a>
