@@ -291,7 +291,7 @@ The only way to have an account created via Steemit.com is to supply your email 
 <a class="anchor" name="What_are_other_ways_to_create_an_account_on_the_blockchain_besides_using_Steemit_com"></a>
 ## What are other ways to create an account on the blockchain besides using Steemit.com?
 
-If you are willing to pay your own signup fee, then there are other ways to create a new account on the blockchain. If you are not sure how to do this, you can ask for help in the <a href="https://steemit.chat/channel/help">Steemit.chat #help channel</a>.
+If you are willing to pay your own signup fee, then there are other ways to create a new account on the blockchain. If you are not sure how to do this, you can ask for help in the <a href="https://steemit.chat/channel/help">#help</a> channel on <a href="https://steemit.chat/home">steemit.chat</a>.
 
 There is also a third-party tool called <a href="https://steemit.com/steemit/@someguy123/anonsteem-create-anonymous-steem-accounts-without-social-media">AnonSteem</a> that accepts Bitcoin and Litecoin to anonymously create a Steem account.
 
@@ -299,7 +299,7 @@ There is also a third-party tool called <a href="https://steemit.com/steemit/@so
 <a class="anchor" name="It_is_not_letting_me_create_an_account_with_my_phone_number__What_should_I_do"></a>
 ## It is not letting me create an account with my phone number. What should I do?
 
-Ask for help in the <a href="https://steemit.chat/channel/help">Steemit.chat #help channel</a>.
+Ask for help in the <a href="https://steemit.chat/channel/help">#help</a> channel on <a href="https://steemit.chat/home">steemit.chat</a>.
 
 <a href="/faq.html#Table_of_Contents_Accounts">&#11025;</a>
 <a class="anchor" name="What_happens_if_my_email_or_phone_number_changes"></a>
@@ -519,7 +519,7 @@ Pictures can also be hosted on an external site. Paste the image's web address (
 
 To add a YouTube or Vimeo video to your blog post, simply paste the link to the video into the post. 
 
-You can also read <a href="https://steemit.com/steemitguide/@algimantas/detailed-guide-how-to-add-videos-in-steemit">this guide from @algimantas</a>, which has more detailed instructions:
+You can also read <a href="https://steemit.com/steemitguide/@algimantas/detailed-guide-how-to-add-videos-in-steemit">this guide</a> from @algimantas, which has more detailed instructions:
 
 <a href="/faq.html#Table_of_Contents_Posting">&#11025;</a>
 <a class="anchor" name="Is_there_a_way_I_can_make_my_images_smaller"></a>
@@ -920,7 +920,7 @@ Just because you received a downvote does not mean that you did something wrong.
 <a class="anchor" name="Will_a_downvote_hurt_my_reputation"></a>
 ## Will a downvote hurt my reputation?
 
-Not necessarily. See: <a href="">What causes my reputation score to go down?</a>
+Not necessarily. See: <a href="/faq.html#What_causes_my_reputation_score_to_go_down">What causes my reputation score to go down?</a>
 
 <a href="/faq.html#Table_of_Contents_Voting_and_Curating">&#11025;</a>
 <a class="anchor" name="What_is_the_difference_between_a_downvote_and_a_flag"></a>
@@ -969,7 +969,7 @@ https://steemit.com/steemitabuse/@cheetah/cheetah-bot-explained
 <a class="anchor" name="Where_do_I_report_a_post_or_comment_that_contains_plagiarism__spam__or_abuse"></a>
 ## Where do I report a post or comment that contains plagiarism, spam, or abuse?
 
-You can report any abusive content to the <a href="https://steemit.chat/channel/steemitabuse">#steemitabuse</a> channel on steemit.chat.
+You can report any abusive content to the <a href="https://steemit.chat/channel/steemitabuse">#steemitabuse</a> channel on <a href="https://steemit.chat/home">steemit.chat</a>.
 
 <a href="/faq.html#Table_of_Contents_Plagiarism__Spam__and_Abuse">&#11025;</a>
 # Reputation
@@ -1349,7 +1349,7 @@ https://steem.io/SteemWhitePaper.pdf
 <a class="anchor" name="Where_can_I_ask_for_help_if_my_question_was_not_answered_here"></a>
 ## Where can I ask for help if my question was not answered here?
 
-If you post your question in the <a href="https://steemit.chat/channel/help">steemit.chat help channel</a>, the users there may be able to help.
+If you post your question in the <a href="https://steemit.chat/channel/help">#help</a> channel on <a href="https://steemit.chat/home">steemit.chat</a>, the users there may be able to help.
 
 You can also create a post on Steemit.com with the tag #help, and someone in the community may be able to answer it.
 
