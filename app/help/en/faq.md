@@ -366,7 +366,6 @@ These are various ways to sort Steem posts.
 ## What information is available in my account menu?
 
 You can get to your account menu by clicking on the avatar icon in the top-right corner of a Steemit.com page. 
-<Icon name="person" />
 
 **Feed** - Here is where you go to see the most recent posts from the people you follow.
 
@@ -1368,3 +1367,4 @@ All links to user posts were created by our users and do not necessarily represe
 Please use the third party tools and content at your own risk.
 
 <a href="/faq.html#Table_of_Contents_Disclaimer">&#11025;</a>
+
