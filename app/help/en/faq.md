@@ -141,7 +141,7 @@
 - <a href="/faq.html#What_is_a_blockchain">What is a blockchain?</a>
 - <a href="/faq.html#What_is_the_Steem_blockchain">What is the Steem blockchain?</a>
 - <a href="/faq.html#What_is_the_difference_between_Steem_and_Steemit">What is the difference between Steem and Steemit?</a>
-- <a href="/faq.html#How_is_Steem_different_from_Bitcoin">How is Steem different from Bitcoin?</a>
+- <a href="/faq.html#How_is_Steem_different_from_bitcoin">How is Steem different from bitcoin?</a>
 - <a href="/faq.html#What_is_the_difference_between_Proof_of_Work__Proof_of_Stake__and_Delegated_Proof_of_Stake">What is the difference between Proof of Work, Proof of Stake, and Delegated Proof of Stake?</a>
 - <a href="/faq.html#How_often_does_the_Steem_blockchain_produce_a_new_block">How often does the Steem blockchain produce a new block?</a>
 - <a href="/faq.html#Is_there_a_way_to_see_the_raw_data_that_is_stored_in_the_blockchain">Is there a way to see the raw data that is stored in the blockchain?</a>
@@ -196,7 +196,7 @@
 
 <a class="anchor" name="Table_of_Contents_Disclaimer"></a>
 ### Disclaimer
-- <a href="/faq.html#Third_Party_References_and_User_Links">Third Party References and User Links
+- <a href="/faq.html#Third_Party_References_and_User_Links">Third Party References and User Links</a>
 
 # General
 
@@ -235,7 +235,7 @@ You can earn digital tokens on Steemit by:
 
 **Voting and curating** - If you discover a post and upvote it before it becomes popular, you can earn a curation reward. The reward amount will depend on the amount of STEEM Power you have.
 
-**Purchasing** - Users can purchase STEEM or Steem Dollar tokens directly through the Steemit wallet using Bitcoin, Ether, or BitShares tokens. They are also available from other markets and exchanges including BlockTrades, Poloniex, Bittrex, Shapeshift.io, and Changelly. STEEM tokens that are powered up to STEEM Power earn a small amount of interest for holding.
+**Purchasing** - Users can purchase STEEM or Steem Dollar tokens directly through the Steemit wallet using bitcoin, Ether, or BitShares tokens. They are also available from other markets and exchanges including BlockTrades, Poloniex, Bittrex, Shapeshift.io, and Changelly. STEEM tokens that are powered up to STEEM Power earn a small amount of interest for holding.
 
 <a href="/faq.html#Table_of_Contents_General">&#11025;</a>
 <a class="anchor" name="Where_do_the_tokens_come_from"></a>
@@ -293,7 +293,7 @@ The only way to have an account created via Steemit.com is to supply your email 
 
 If you are willing to pay your own signup fee, then there are other ways to create a new account on the blockchain. If you are not sure how to do this, you can ask for help in the <a href="https://steemit.chat/channel/help">#help</a> channel on <a href="https://steemit.chat/home">steemit.chat</a>.
 
-There is also a third-party tool called <a href="https://steemit.com/steemit/@someguy123/anonsteem-create-anonymous-steem-accounts-without-social-media">AnonSteem</a> that accepts Bitcoin and Litecoin to anonymously create a Steem account.
+There is also a third-party tool called <a href="https://steemit.com/steemit/@someguy123/anonsteem-create-anonymous-steem-accounts-without-social-media">AnonSteem</a> that accepts bitcoin and Litecoin to anonymously create a Steem account.
 
 <a href="/faq.html#Table_of_Contents_Accounts">&#11025;</a>
 <a class="anchor" name="It_is_not_letting_me_create_an_account_with_my_phone_number__What_should_I_do"></a>
@@ -642,7 +642,7 @@ There is a 20 second wait time in between comments to limit spam.
 <a class="anchor" name="Where_do_the_new_STEEM_tokens_come_from"></a>
 ## Where do the new STEEM tokens come from?
 
-Blockchains like Steem and Bitcoin produce new tokens each time a block is produced. Unlike Bitcoin, where all of the new coins go to the block producers (called miners), the Steem blockchain allocates a majority of the new tokens to a reward fund. The reward fund gives users tokens for participating in the platform.
+Blockchains like Steem and bitcoin produce new tokens each time a block is produced. Unlike bitcoin, where all of the new coins go to the block producers (called miners), the Steem blockchain allocates a majority of the new tokens to a reward fund. The reward fund gives users tokens for participating in the platform.
 
 <a href="/faq.html#Table_of_Contents_Economics">&#11025;</a>
 <a class="anchor" name="How_many_new_tokens_are_generated_by_the_blockchain"></a>
@@ -704,7 +704,7 @@ Posts and comments remain active for 7 days. When the period is over, you are ab
 <a class="anchor" name="What_is_the_difference_between_STEEM__STEEM_Power__and_Steem_Dollars"></a>
 ## What is the difference between STEEM, STEEM Power, and Steem Dollars?
 
-**STEEM** - STEEM is the base liquid currency token in the platform. STEEM can be powered up into STEEM Power, traded for Steem Dollars, and transferred to other accounts. It is a cryptocurrency token, similar to Bitcoin.
+**STEEM** - STEEM is the base liquid currency token in the platform. STEEM can be powered up into STEEM Power, traded for Steem Dollars, and transferred to other accounts. It is a cryptocurrency token, similar to bitcoin.
 
 **STEEM Power** - STEEM Power (abbreviated SP) is a measurement of how much influence a user has in the Steem network. The more STEEM Power a user holds, the more they can influence the value of posts and comments. STEEM Power is less liquid. If a user wishes to “Power Down” SP, they will receive equal distributions of the STEEM weekly, over a 13 week period.
 
@@ -731,7 +731,7 @@ To buy:
 
 STEEM purchases made on Steemit.com are facilitated by <a href="https://blocktrades.us">BlockTrades</a>.
 
-Bitcoin can also be exchanged for STEEM on external markets such as <a href="https://poloniex.com">Poloniex</a>, <a href="https://bittrex.com">Bittrex</a>, <a href="https://shapeshift.io">ShapeShift.io</a>, and <a href="https://changelly.com">Changelly</a>.
+bitcoin can also be exchanged for STEEM on external markets such as <a href="https://poloniex.com">Poloniex</a>, <a href="https://bittrex.com">Bittrex</a>, <a href="https://shapeshift.io">ShapeShift.io</a>, and <a href="https://changelly.com">Changelly</a>.
 
 <a href="/faq.html#Table_of_Contents_Economics">&#11025;</a>
 <a class="anchor" name="What_is_powering_up_and_down"></a>
@@ -1056,8 +1056,8 @@ Steem is the name of the blockchain that stores all of the data and transactions
 Steemit is a front end web interface to interact with the blockchain, and view the blockchain data.
 
 <a href="/faq.html#Table_of_Contents_Blockchain">&#11025;</a>
-<a class="anchor" name="How_is_Steem_different_from_Bitcoin"></a>
-## How is Steem different from Bitcoin?
+<a class="anchor" name="How_is_Steem_different_from_bitcoin"></a>
+## How is Steem different from bitcoin?
 
 On a technical level, the two networks rely on the same model of a blockchain, but are built upon different technologies and codebase. Steem is based on a new state-of-the-art blockchain technology called Graphene, which uses "witnesses" instead of "miners" to produce blocks. 
 
