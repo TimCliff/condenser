@@ -226,9 +226,9 @@ Most social media sites extract value from their userbase for the benefit of sha
 No. It is free to post, comment, and vote on content on Steemit.com. You might even get paid for it!
 
 <a href="/faq.html#Table_of_Contents_General">&#11025;</a>
-
-## Can I earn digital tokens on Steemit? How?
 <a class="anchor" name="Can_I_earn_digital_tokens_on_Steemit_How"></a>
+## Can I earn digital tokens on Steemit? How?
+
 You can earn digital tokens on Steemit by:
 
 **Posting** - By sharing your posts, you can earn upvotes from community members. Depending on the upvotes you receive, you will get a portion of the ongoing Steem reward pool.
@@ -1367,4 +1367,3 @@ All links to user posts were created by our users and do not necessarily represe
 Please use the third party tools and content at your own risk.
 
 <a href="/faq.html#Table_of_Contents_Disclaimer">&#11025;</a>
-
