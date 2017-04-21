@@ -1135,7 +1135,7 @@ https://steemit.com/art/@artist1989/custom-steem-and-steemit-art-and-instruction
 <a class="anchor" name="Did_Steemit__pre_mine__tokens"></a>
 ## Did Steemit "pre-mine" tokens?
 
-The STEEM tokens mined by Steemit, Inc were not "pre-mined". All mining took place after the coin was officially and publicly announced on <a href="https://bitcointalk.org/index.php?topic=1410943.0">Bitcointalk.org</a>.
+The STEEM tokens mined by Steemit, Inc. were not "pre-mined". All mining took place after the coin was officially and publicly announced on <a href="https://bitcointalk.org/index.php?topic=1410943.0">Bitcointalk.org</a>.
 
 <a href="/faq.html#Table_of_Contents_Steemit__Inc">^</a>
 <a class="anchor" name="What_is_the_Steemit_Privacy_Policy"></a>
