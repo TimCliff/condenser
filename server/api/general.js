@@ -37,7 +37,8 @@ export default function useGeneralApi(app) {
                 posting_key: account.posting_key,
                 memo_key: account.memo_key,
                 remote_ip,
-                referrer: this.session.r
+                referrer: this.session.r,
+                created: false
             })).catch(error => {
                 console.error('!!! Can\'t create account wait model in /accounts api', this.session.uid, error);
         });
@@ -56,11 +57,6 @@ export default function useGeneralApi(app) {
     });
 
     router.post('/accounts', koaBody, function *() {
-        // temporary disable any accounts creation until approval is implemented
-        this.body = JSON.stringify({error: 'Unauthorized'});
-        this.status = 401;
-        return;
-
         if (rateLimitReq(this, this.req)) return;
         const params = this.request.body;
         const account = typeof(params) === 'string' ? JSON.parse(params) : params;
@@ -73,8 +69,6 @@ export default function useGeneralApi(app) {
             return;
         }
 
-        const remote_ip = getRemoteIp(this.req);
-
         const user_id = this.session.user;
         if (!user_id) { // require user to sign in with identity provider
             this.body = JSON.stringify({error: 'Unauthorized'});
@@ -82,6 +76,7 @@ export default function useGeneralApi(app) {
             return;
         }
 
+        // acquire global lock so only one account can be created at a time
         try {
             const lock_entity_res = yield Tarantool.instance().call('lock_entity', user_id+'');
             if (!lock_entity_res[0][0]) {
@@ -95,43 +90,31 @@ export default function useGeneralApi(app) {
             const rnd_wait_time = Math.random() * 10000;
             console.log('-- /accounts rnd_wait_time -->', rnd_wait_time);
             yield new Promise((resolve) =>
-            setTimeout(() => resolve(), rnd_wait_time)
-        )
+                setTimeout(() => resolve(), rnd_wait_time)
+            )
         }
 
         try {
             const user = yield models.User.findOne(
-                {attributes: ['verified', 'waiting_list'], where: {id: user_id}}
+                {attributes: ['id'], where: {id: user_id, account_status: 'approved'}}
             );
             if (!user) {
-                this.body = JSON.stringify({error: 'Unauthorized'});
-                this.status = 401;
-                return;
-            }
-
-            // check if user's ip is associated with any bot
-            const same_ip_bot = yield models.User.findOne({
-                attributes: ['id', 'created_at'],
-                where: {remote_ip, bot: true}
-            });
-            if (same_ip_bot) {
-                console.log('-- /accounts same_ip_bot -->', user_id, this.session.uid, remote_ip, user.email);
-                this.body = JSON.stringify({error: 'We are sorry, we cannot sign you up at this time because your IP address is associated with bots activity. Please contact support@steemit.com for more information.'});
-                this.status = 401;
-                return;
+                throw new Error("We can't find your sign up request. You either haven't started your sign up application or weren't approved yet.");
             }
 
             const existing_account = yield models.Account.findOne({
-                attributes: ['id', 'created_at'],
+                attributes: ['id', 'created'],
                 where: {user_id, ignored: false},
                 order: 'id DESC'
             });
-            if (existing_account) {
+            if (existing_account && existing_account.created) {
                 throw new Error("Only one Steem account per user is allowed in order to prevent abuse");
             }
 
+            const remote_ip = getRemoteIp(this.req);
+            // rate limit account creation to one per IP every 10 minutes
             const same_ip_account = yield models.Account.findOne(
-                {attributes: ['created_at'], where: {remote_ip: esc(remote_ip)}, order: 'id DESC'}
+                {attributes: ['created_at'], where: {remote_ip: esc(remote_ip), created: true}, order: 'id DESC'}
             );
             if (same_ip_account) {
                 const minutes = (Date.now() - same_ip_account.created_at) / 60000;
@@ -140,43 +123,6 @@ export default function useGeneralApi(app) {
                     throw new Error('Only one Steem account allowed per IP address every 10 minutes');
                 }
             }
-            if (user.waiting_list) {
-                console.log(`api /accounts: waiting_list user ${this.session.uid} #${user_id}`);
-                throw new Error('You are on the waiting list. We will get back to you at the earliest possible opportunity.');
-            }
-
-            // disable email verification for now
-            // const eid = yield models.Identity.findOne(
-            //     {attributes: ['id'], where: {user_id, provider: 'email', verified: true}, order: 'id DESC'}
-            // );
-            // if (!eid) {
-            //     console.log(`api /accounts: not confirmed email for user ${this.session.uid} #${user_id}`);
-            //     throw new Error('Email address is not confirmed');
-            // }
-
-            // check phone
-            const mid = yield models.Identity.findOne(
-                {attributes: ['id'], where: {user_id, provider: 'phone', verified: true}, order: 'id DESC'}
-            );
-            if (!mid) {
-                console.log(`api /accounts: not confirmed sms for user ${this.session.uid} #${user_id}`);
-                throw new Error('Phone number is not confirmed');
-            }
-
-            // const [fee_value, fee_currency] = config.get('registrar.fee').split(' ');
-            // let fee = parseFloat(fee_value);
-            // try {
-            //     const chain_properties = yield api.getChainPropertiesAsync();
-            //     const chain_fee = parseFloat(chain_properties.account_creation_fee);
-            //     if (chain_fee && chain_fee > fee) {
-            //         if (fee / chain_fee > 0.5) { // just a sanity check - chain fee shouldn't be a way larger
-            //             console.log('-- /accounts warning: chain_fee is larger than config fee -->', this.session.uid, fee, chain_fee);
-            //             fee = chain_fee;
-            //         }
-            //     }
-            // } catch (error) {
-            //     console.error('Error in /accounts get_chain_properties', error);
-            // }
 
             yield createAccount({
                 signingKey: config.get('registrar.signing_key'),
@@ -193,7 +139,11 @@ export default function useGeneralApi(app) {
 
             this.body = JSON.stringify({status: 'ok'});
 
-            models.Account.create(escAttrs({
+            // update user account status
+            yield user.update({account_status: 'created'});
+
+            // update or create account record
+            const account_attrs = escAttrs({
                 user_id,
                 name: account.name,
                 owner_key: account.owner_key,
@@ -201,10 +151,16 @@ export default function useGeneralApi(app) {
                 posting_key: account.posting_key,
                 memo_key: account.memo_key,
                 remote_ip,
-                referrer: this.session.r
-            })).catch(error => {
-                console.error('!!! Can\'t create account model in /accounts api', this.session.uid, error);
-        });
+                referrer: this.session.r,
+                created: true
+            });
+            if (existing_account) {
+                yield existing_account.update(account_attrs);
+            } else {
+                models.Account.create(account_attrs).catch(error => {
+                    console.error('!!! Can\'t create account model in /accounts api', this.session.uid, error);
+                });
+            }
             if (mixpanel) {
                 mixpanel.track('Signup', {
                     distinct_id: this.session.uid,
@@ -218,6 +174,7 @@ export default function useGeneralApi(app) {
             this.status = 500;
         } finally {
             // console.log('-- /accounts unlock_entity -->', user_id);
+            // release global lock
             try { yield Tarantool.instance().call('unlock_entity', user_id + ''); } catch(e) {/* ram lock */}
         }
         recordWebEvent(this, 'api/accounts', account ? account.name : 'n/a');

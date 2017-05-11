@@ -11,7 +11,9 @@ import config from "config";
 import MiniHeader from "app/components/modules/MiniHeader";
 import secureRandom from "secure-random";
 import Mixpanel from "mixpanel";
-import Progress from 'react-foundation-components/lib/global/progress-bar';
+import Progress from "react-foundation-components/lib/global/progress-bar";
+// import {createAccount} from "server/api/general"
+import fetch from 'node-fetch';
 
 // FIXME copy paste code, refactor mixpanel out
 var mixpanel = null;
@@ -40,7 +42,7 @@ function* confirmEmailHandler() {
         confirmation_code
     );
     const eid = yield models.Identity.findOne({
-        where: { confirmation_code: confirmation_code, provider: "email"}
+        where: { confirmation_code, provider: "email"}
     });
     if (!eid) {
         this.status = 401;
@@ -50,7 +52,7 @@ function* confirmEmailHandler() {
     if (eid.email_verified) {
         this.session.user = eid.user_id; // session recovery (user changed browsers)
         this.flash = { success: "Email has already been verified" };
-        this.redirect("/approval?confirm=true");
+        this.redirect("/approval?confirm_email=true");
         return;
     }
     const hours_ago = (Date.now() - eid.updated_at) / 1000.0 / 3600.0;
@@ -64,7 +66,7 @@ function* confirmEmailHandler() {
     yield eid.update({
         verified: true
     });
-    yield models.User.update({ email: eid.email, waiting_list: true}, {
+    yield models.User.update({ email: eid.email}, {
         where: { id: eid.user_id }
     });
 
@@ -76,8 +78,8 @@ function* confirmEmailHandler() {
     });
 
     if (eid_phone) {
-        this.flash = { success: "Thanks for confirming your email!" };
-        this.redirect("/approval?confirm=true");
+        // this.flash = { success: "Thanks for confirming your email!" };
+        this.redirect("/approval?confirm_email=true");
     } else {
         this.flash = { success: "Thanks for confirming your email. Your phone needs to be confirmed before proceeding." };
         this.redirect("/enter_mobile");
@@ -102,47 +104,40 @@ export default function useEnterAndConfirmEmailPages(app) {
     const koaBody = koa_body();
     const rc_site_key = config.get("recaptcha.site_key");
 
-    router.get("/enter_email", function*() {
-        console.log("-- /enter_email -->", this.session.uid, this.session.user, this.session);
-        // update requested account name for later
-        const user = yield models.User.findOne({ where: { uid: this.session.uid }});
-        if (!user) {
-            // create user and identity
-            console.log("-- /Creating User & Identity -->");
-            let data = {};
-            data["last_step"] = 1;
-            const user = yield models.User.create({
-                uid: this.session.uid,
-                name: this.request.query.account,
-                sign_up_meta: JSON.stringify(data)
-            });
+    router.get("/start/:code", function*() {
+        const code = this.params.code;
+        const eid = yield models.Identity.findOne({ attributes: ["id", "user_id"], where: { provider: "email", confirmation_code: code }});
+        const user = eid ? yield models.User.findOne({ attributes: ["id", "account_status"], where: { id: eid.user_id }}) : null;
+        // validate there is email identity and user record
+        if (eid && user) {
+            // set session based on confirmation code(user from diff device, etc)
             this.session.user = user.id;
-            const user_identity = yield models.Identity.create({
-                user_id: user.id,
-                uid: user.uid,
-                verified: false,
-                provider: "email"
-            });
-        } else {
-            const eid = yield models.Identity.findOne({ where: { user_id: user.id, provider: "email" }});
-            if (!eid) {
-                yield models.Identity.create({
-                    user_id: user.id,
-                    uid: user.uid,
-                    verified: false,
-                    provider: "email"
-                });
+            if (user.uid) this.session.uid = user.uid;
+            console.log('-- checking incoming start request -->', this.session.uid, this.session.user);
+            if (user.account_status === "approved") {
+                console.log("-- approved account for -->", this.session.uid, this.session.user);
+                this.redirect("/create_account");
+            } else if (user.account_status === "created") {
+                // user clicked expired link already create account
+                this.flash = { alert: "Your account has already been created." };
+                this.redirect("/login.html");
+            } else if (user.account_status === "waiting") {
+                this.flash = { error: "Your account has not been approved." };
+                this.redirect("/");
             } else {
-                let data = user.sign_up_meta ? JSON.parse(user.sign_up_meta) : {};
-                data["last_step"] = 1;
-                yield user.update({
-                    name: this.request.query.account,
-                    sign_up_meta: JSON.stringify(data)
-                });
+                this.flash = { error: "Issue with your sign up status." };
+                this.redirect("/");
             }
-
+        } else {
+            // no matching identity found redirect
+            this.flash = { error: "This is not a valid sign up code. Please click the link in your welcome email." };
+            this.redirect("/");
         }
-        // this.session.user = null;
+    });
+
+    router.get("/enter_email", function*() {
+        console.log("-- /enter_email -->", this.session.uid, this.session.user, this.session, this.request.query.account);
+        this.session.picked_account_name = this.request.query.account;
         let default_email = "";
         if (this.request.query && this.request.query.email)
             default_email = this.request.query.email;
@@ -155,12 +150,12 @@ export default function useEnterAndConfirmEmailPages(app) {
                         <Progress tabIndex="0" value={50} max={100} />
                         <form id="submit_email" action="/submit_email" method="POST">
                             <h4 style={{ color: "#4078c0" }}>
-                                Please provide your email address to continue the registration process
+                                Please provide your email address to continue.
                             </h4>
                             <p className="secondary">
-                                Email verification helps with preventing spam and allows Steemit to assist with Account Recovery in case your account is ever compromised.
+                                We need your email address to ensure that we can contact you to verify account ownership in the event that your account is ever compromised.
                             </p>
-                            <p className="secondary"> Your email must be confirmed to create a valid account. Make sure to enter a <strong>valid</strong> email.</p>
+                            <p className="secondary">Please make sure that you enter a <strong>valid</strong> email so that you receive the confirmation link.</p>
                             <input
                                 type="hidden"
                                 name="csrf"
@@ -168,8 +163,6 @@ export default function useEnterAndConfirmEmailPages(app) {
                             />
                             <label>
                                 Email
-
-
                                 <input
                                     type="email"
                                     name="email"
@@ -177,11 +170,6 @@ export default function useEnterAndConfirmEmailPages(app) {
                                 />
                             </label>
                             <br />
-                            {/*<div*/}
-                            {/*className="g-recaptcha"*/}
-                            {/*data-sitekey={rc_site_key}*/}
-                            {/*/>*/}
-                            {/*<br />*/}
                             <div className="error">
                                 {this.flash.error}
                             </div>
@@ -230,7 +218,7 @@ export default function useEnterAndConfirmEmailPages(app) {
                 this.flash = {
                     error: "Failed captcha verification, please try again"
                 };
-                this.redirect("/enter_email?email=" + email);
+                this.redirect("/enter_email?email=" + email + "&account=" + this.request.query.account);
                 return;
             }
         }
@@ -244,126 +232,125 @@ export default function useEnterAndConfirmEmailPages(app) {
                 email
             );
             this.flash = { error: "Not valid email address" };
-            this.redirect("/enter_email?email=" + email);
+            this.redirect("/enter_email?email=" + email + "&account=" + this.request.query.account);
             return;
         }
-        const email_provider = parsed_email[1];
-        const blocked_email = yield models.List.findOne({
-            attributes: ["id"],
-            where: { kk: "block-email-provider", value: email_provider }
-        });
-        if (blocked_email) {
-            console.log(
-                "-- /submit_email blocked_email -->",
-                this.session.uid,
-                email
-            );
-            this.flash = {
-                error: (
-                    "Not a supported email address: " +
-                    email +
-                    ". Please make sure your you don't use any temporary email providers, contact support@steemit.com for more information."
-                )
-            };
-            this.redirect("/enter_email?email=" + email);
-            return;
-        }
+
+        // const email_provider = parsed_email[1];
+        // const blocked_email = yield models.List.findOne({
+        //     attributes: ["id"],
+        //     where: { kk: "block-email-provider", value: email_provider }
+        // });
+        // if (blocked_email) {
+        //     console.log(
+        //         "-- /submit_email blocked_email -->",
+        //         this.session.uid,
+        //         email
+        //     );
+        //     this.flash = {
+        //         error: (
+        //             "Not a supported email address: " +
+        //             email +
+        //             ". Please make sure your you don't use any temporary email providers, contact support@steemit.com for more information."
+        //         )
+        //     };
+        //     // update identity with blocked email address
+        //     const block_eid = yield models.Identity.findOne({
+        //         attributes: ["id"],
+        //         where: { user_id: this.session.user, provider: "email" },
+        //         order: "id DESC"
+        //     });
+        //     if (block_eid) yield block_eid.update({email});
+        //     this.redirect("/enter_email?email=" + email);
+        //     return;
+        // }
 
         const existing_email = yield models.Identity.findOne({
-            where: { email: email, provider: "email" }
-        });
-
-        const confirmation_code = secureRandom.randomBuffer(13).toString("hex");
-        let user_id = this.session.user;
-        let user;
-        let eid;
-        user = yield models.User.findOne({
-            where: { uid: this.session.uid }
-        });
-        eid = yield models.Identity.findOne({
-            where: { user_id: user.id }
+            where: { email, provider: "email" }
         });
         if (existing_email) {
             console.log(
                 "-- /submit_email existing_email -->",
-                user_id,
                 this.session.uid,
                 email,
                 existing_email.user_id
             );
             const act = yield models.Account.findOne({
                 attributes: ["id"],
-                where: { user_id: existing_email.user_id, ignored: false },
+                where: {user_id: existing_email.user_id, ignored: false},
                 order: "id DESC"
             });
             if (act) {
-                this.flash = { error: "This email has already been taken." };
+                this.flash = {error: "This email has already been taken."};
                 this.redirect("/enter_email?email=" + email);
                 return;
             }
-            // We must resend the email to get the session going again if the user gets interrupted (clears cookies or changes browser) after email verify.
-            const { id } = existing_email;
+        }
 
-            yield eid.update({confirmation_code: confirmation_code});
-            console.log(
-                "-- /submit_email ->",
-                this.session.uid,
-                this.session.user,
-                email,
-                eid.id,
-                confirmation_code
-            );
-
-            sendEmail("confirm_email", email, { confirmation_code });
-        } else {
-            yield eid.update({
-                email: this.request.body.email,
-                confirmation_code: confirmation_code
-            });
-            let data = user.sign_up_meta ? JSON.parse(user.sign_up_meta) : {};
-            data["last_step"] = 2;
+        let user = yield models.User.findOne({ where: { uid: this.session.uid }});
+        if (user) {
+            const data = user.sign_up_meta ? JSON.parse(user.sign_up_meta) : {};
+            data.last_step = 2;
             yield user.update({
                 sign_up_meta: JSON.stringify(data)
             });
-            console.log(
-                "-- /submit_email -->",
-                this.session.uid,
-                this.session.user,
-                email,
-                eid.id,
-                confirmation_code
-            );
-
-            sendEmail("confirm_email", email, { confirmation_code });
-            // redirect to phone verification
-            this.redirect("/enter_mobile");
-            return;
+        } else {
+            // create user and identity
+            console.log("-- /Creating User -->");
+            user = yield models.User.create({
+                uid: this.session.uid,
+                remote_ip: getRemoteIp(this.request.req),
+                sign_up_meta: JSON.stringify({last_step: 2}),
+                account_status: 'waiting'
+            });
         }
-        const body = renderToString(
-            <div className="App">
-                <MiniHeader />
-                <br />
-                <div className="row" style={{ maxWidth: "32rem" }}>
-                    <div className="column">
-                        Thank you for providing your email address (
-                        {email}
-                        ).
-                        <br />
+        this.session.user = user.id;
 
-                        To continue please click on the link in the email we've sent you.
-
-                        <br />
-                        <span className="secondary">
-                            Didn't recieve email?{" "}
-                            <a href={`/enter_email?email=${email}`}>Re-send</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
+        const confirmation_code = secureRandom.randomBuffer(13).toString("hex");
+        let eid = yield models.Identity.findOne({
+            where: { user_id: user.id, provider: "email" }
+        });
+        if (eid) {
+            yield eid.update({
+                verified: false,
+                email,
+                confirmation_code
+            });
+        } else {
+            eid = yield models.Identity.create({
+                user_id: user.id,
+                provider: 'email',
+                verified: false,
+                email,
+                confirmation_code
+            });
+        }
+        console.log(
+            "-- /submit_email ->",
+            this.session.uid,
+            this.session.user,
+            email,
+            eid.id,
+            confirmation_code
         );
-        const props = { body, title: "Email Confirmation", assets, meta: [] };
-        this.body = "<!DOCTYPE html>" +
-            renderToString(<ServerHTML {...props} />);
+        sendEmail("confirm_email", email, { confirmation_code });
+
+        if (this.session.picked_account_name) {
+            const account = yield models.Account.findOne({
+                attributes: ['id'],
+                where: {user_id: user.id, ignored: false},
+                order: 'id DESC'
+            });
+            if (!account) {
+                models.Account.create({
+                    user_id: user.id,
+                    name: this.session.picked_account_name,
+                    remote_ip: getRemoteIp(this.request.req)
+                });
+            }
+        }
+        // redirect to phone verification
+        this.redirect("/enter_mobile");
     });
 
     router.get("/confirm_email/:code", confirmEmailHandler);

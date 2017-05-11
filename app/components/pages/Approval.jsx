@@ -5,28 +5,30 @@ class Approval extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            confirm: false
+            confirm_email: false
         }
     }
 
     componentWillMount() {
-        if (this.props.location.query.confirm) {
-            this.setState({confirm: true});
+        if (this.props.location.query.confirm_email) {
+            this.setState({confirm_email: true});
         }
     }
 
     render() {
         let body = '';
-        if (this.state.confirm) {
+        if (this.state.confirm_email) {
             body = <div>
-                <p><strong>All set. Your email is now confirmed.</strong></p>
-                <p>Please make sure your password is backed up and safely secure.</p>
-                <p>You will receive an email confirmation when you can log into your new account.</p>
+                <h4>Thanks for confirming your email!</h4>
+                <p>After validating your sign up request with us we'll look it over for approval. As soon as your turn is up and you're approved, you'll be sent a link to finalize your account!</p>
+                <p>You'll be among the earliest members of the Steemit community!</p>
             </div>
         } else {
             body = <div>
-                <p><strong>You've been added to the wait list and pending approval.</strong></p>
-                <p>To process your account, <strong>you must validate your email</strong> by clicking the link in your welcome email.</p>
+                <h4>Thanks for confirming your phone number!</h4>
+                <p>You're a few steps away from getting to the top of the list. Check your email and click the email validation link.</p>
+                <p>After validating your sign up request with us we'll look it over for approval. As soon as your turn is up and you're approved, you'll be sent a link to finalize your account!</p>
+                <p>You'll be among the earliest members of the Steemit community!</p>
             </div>
         }
         return (
