@@ -5,7 +5,7 @@
 ### Quick Start Guide
 
 - <a href="/welcome#No_Cost_to_Participate">No Cost to Participate</a>
-- <a href="/welcome#Welcome_Page">Welcome Page</a>
+- <a href="/welcome#Finding_This_Page">Finding This Page</a>
 - <a href="/welcome#Upvotes">Upvotes</a>
 - <a href="/welcome#Comments">Comments</a>
 - <a href="/welcome#Creating_Posts">Creating Posts</a>
@@ -47,10 +47,10 @@
 It is free to post, comment, or upvote all content on Steemit.com. You might even get paid for it!
 
 <a href="/welcome#Table_of_Contents">^</a>
-<a class="anchor" name="Welcome_Page"></a>
-### Welcome Page
+<a class="anchor" name="Finding_This_Page"></a>
+### Finding This Page
 
-To return to this page at any time, click on the "Welcome" link in the main menu in the upper right corner.
+To return to this page at any time, click on the "Quick Start Guide" link in the main menu in the upper right corner.
 
 <a href="/welcome#Table_of_Contents">^</a>
 <a class="anchor" name="Upvotes"></a>
