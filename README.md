@@ -54,7 +54,7 @@ cp default.json steem-dev.json
 cd ..
 ```
 
-#### Generate a new crypto_key and save under server_session_secret in ./steem-dev.json.
+#### Generate a new crypto_key and save under server_session_secret in ./config/steem-dev.json.
 
 ```bash
 node
