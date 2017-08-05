@@ -129,7 +129,7 @@ user@example:~$ tarantool
 yarn install
 ```
 
-### Development
+#### Launch (Development)
 
 ```bash
 yarn start
@@ -137,13 +137,13 @@ yarn start
 
 It will take a few moments to launch. Once it says "Application started on port ####", you now have your development front end running at localhost:####, connected to the main public steem blockchain. You don't need to run ```steemd``` locally, by default you will connect to ```ws://node.steem.ws```.  Use your regular account name and credentials to login -- there is no separate dev login.
 
-### Production
+#### Launch (Production)
 
-If you want to test it locally in production mode, just run the following commands:
+If you want to test it locally in production mode, just run the following command:
 
 ```bash
-npm run build
-npm run prod
+yarn run build
+yarn run prod
 ```
 
 or via pm2:
