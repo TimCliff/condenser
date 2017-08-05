@@ -135,7 +135,7 @@ yarn install
 yarn start
 ```
 
-It will take a few moments to launch. Once it says "Application started on port ####", you now have your development front end running at localhost:####, connected to the main public steem blockchain. You don't need to run ```steemd``` locally, by default you will connect to ```ws://node.steem.ws```.  Use your regular account name and credentials to login -- there is no separate dev login.
+It will take a few moments to launch. Once it says "Application started on port ####", you now have your development front end running at localhost:####, connected to the main public steem blockchain. It may output some SQL commands after that too, so you may need to scroll up to verify. You don't need to run ```steemd``` locally, by default you will connect to ```ws://node.steem.ws```.  Use your regular account name and credentials to login -- there is no separate dev login.
 
 #### Launch (Production)
 
@@ -193,10 +193,14 @@ Add an env var for the database in your shell:
 `touch ~/.bash_profile`
 
 Add 1 line to `~/.bash_profile`:
-`export SDC_DATABASE_URL="mysql://root:password@localhost/steemit_dev"`
+```bash
+export SDC_DATABASE_URL="mysql://root:password@localhost/steemit_dev"
+```
 
 Then run:
-`source ~/.bash_profile`
+```bash
+source ~/.bash_profile`
+```
 
 #### How to create a password for the root mysql account:
 
