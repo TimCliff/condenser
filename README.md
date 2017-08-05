@@ -18,33 +18,28 @@ cd condenser
 mkdir tmp
 ```
 
-#### Verify NVM is installed
+#### Install yarn if not already installed
 
 ```bash
-command -v nvm # verify
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
 ```
 
-It should output "nvm". If it does not, install nvm.
-
-#### Install dependencies
+#### OS X: Install brew if not already installed
 
 ```bash
-# Install at least Node v6.3 if you don't already have it ([NVM](https://github.com/creationix/nvm) recommended)
-nvm install v6
-
-npm install
-npm install -g babel-cli
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 #### Create config file
-
 
 ```bash
 cd config
 cp default.json steem-dev.json
 ```
 
-Generate a new crypto_key and save under server_session_secret in ./steem-dev.json.
+#### Generate a new crypto_key and save under server_session_secret in ./steem-dev.json.
 
 ```bash
 node
@@ -73,72 +68,36 @@ sudo apt-get update
 sudo apt-get install mysql-server
 ```
 
-On Ubuntu 16.04+ you may be unable to connect to mysql without root access, if
-so update the mysql root user as follows::
+#### Save password in config
 
-```
-sudo mysql -u root
-DROP USER 'root'@'localhost';
-CREATE USER 'root'@'%' IDENTIFIED BY '';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
-FLUSH PRIVILEGES;
-```
+Edit `~/condenser/db/config/config.json` 
+Save the mysql password under `"password"`.
 
-Now launch mysql client and create steemit_dev database:
+#### Launch mysql client and create steemit_dev database:
+
 ```bash
-mysql -u root
+mysql -u root -p
+(enter password)
 > create database steemit_dev;
 > quit
 ```
 
-Create a password for the root mysql account:
-
-mysql_secure_installation
-
-(answer all it's questions as No, with Enter key, except to add a password, use "password")
-
-
-Install `sequelize-cli` globally:
+#### Install sequelize and mysql2:
 
 ```bash
-npm install -g sequelize sequelize-cli pm2 mysql
+yarn add sequelize
+yarn add mysql2
 ```
 
-###### Edit the following files and make these changes:
+#### Add an env var for the database in your shell:
 
-Edit `~/condenser/db/config/config.json` and save the mysql password under "password".
+`touch ~/.bash_profile`
 
-Edit `~/condenser/config/default.json` and enter this string for database:
-
-"database_url": "mysql://root:password@127.0.0.1/steemit_dev"
-
-Edit `~/condenser/.babelrc if it doesn't look like the following: 
-
-{
-
-  "presets": ["es2015", "stage-0", "react"],
-
-  "plugins": ["transform-runtime", "transform-decorators-legacy"]
-
-}
-
-
-###### IMPORTANT: Add an env var for the database as well in your shell:
-
-touch ~/.bash_profile
-edit this file, add 1 line:
-
+Add 1 line:
 `export SDC_DATABASE_URL="mysql://root:password@localhost/steemit_dev"`
 
-source ~/.bash_profile
-
-globally install sql2:
-
-npm i -g mysql2
-
-
-
-Run `sequelize db:migrate` in `db/` directory.
+Then run:
+`source ~/.bash_profile`
 
 #### Install Tarantool - Production Only
 
@@ -160,10 +119,16 @@ Test the interactive console:
 user@example:~$ tarantool
 ```
 
+#### Install all the dependencies of the project
+
+```bash
+yarn install
+```
+
 ### Development
 
 ```bash
-npm start
+yarn start
 ```
 
 It will take a few moments to launch. Once it says "Application started on port ####", you now have your development front end running at localhost:####, connected to the main public steem blockchain. You don't need to run ```steemd``` locally, by default you will connect to ```ws://node.steem.ws```.  Use your regular account name and credentials to login -- there is no separate dev login.
@@ -213,6 +178,45 @@ npm -i -g pm2 # one time
 pm2 start config/process.json
 ```
 
+## Troubleshooting
+
+#### On Ubuntu 16.04+ you may be unable to connect to mysql without root access. 
+
+If so update the mysql root user as follows::
+
+```bash
+sudo mysql -u root
+DROP USER 'root'@'localhost';
+CREATE USER 'root'@'%' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+FLUSH PRIVILEGES;
+```
+
+#### If the database connection is not working, double check these settings
+
+Edit `~/condenser/config/default.json` and enter this string for database:
+
+```bash
+"database_url": "mysql://root:password@127.0.0.1/steemit_dev"
+```
+
+Edit `~/condenser/.babelrc` if it doesn't look like the following: 
+
+```bash
+{
+
+  "presets": ["es2015", "stage-0", "react"],
+
+  "plugins": ["transform-runtime", "transform-decorators-legacy"]
+
+}
+```
+
+#### How to create a password for the root mysql account:
+
+`mysql_secure_installation`
+
+(answer all it's questions as No, with Enter key, except to add a password, use "password")
 
 ## Issues
 
