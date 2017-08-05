@@ -26,7 +26,7 @@ sudo apt-get update && sudo apt-get install yarn
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-#### Install Node v6.3 (or above) if you don't already have it ([NVM](https://github.com/creationix/nvm) recommended)
+#### Install Node v6.3 (or above) if not already installed ([NVM](https://github.com/creationix/nvm) recommended)
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
