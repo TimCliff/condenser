@@ -11,17 +11,11 @@ Steemit.com is the react.js web interface to the world's first and best blockcha
 
 ## Installation
 
-#### Clone the repository and make a tmp folder
-```bash
-git clone https://github.com/steemit/condenser
-cd condenser
-mkdir tmp
-```
-
 #### Install yarn if not already installed
 
 ```bash
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+(enter password)
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update && sudo apt-get install yarn
 ```
@@ -32,11 +26,25 @@ sudo apt-get update && sudo apt-get install yarn
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+#### Install Node if you don't already have it ([NVM](https://github.com/creationix/nvm) recommended)
+
+```bash
+nvm install v6
+```
+
+#### Clone the repository and make a tmp folder
+```bash
+git clone https://github.com/steemit/condenser
+cd condenser
+mkdir tmp
+```
+
 #### Create config file
 
 ```bash
 cd config
 cp default.json steem-dev.json
+cd ..
 ```
 
 #### Generate a new crypto_key and save under server_session_secret in ./steem-dev.json.
@@ -70,7 +78,7 @@ sudo apt-get install mysql-server
 
 #### Save password in config
 
-Edit `~/condenser/db/config/config.json` 
+Edit `~/condenser/src/db/config/config.json` 
 Save the mysql password under `"password"`.
 
 #### Launch mysql client and create steemit_dev database:
