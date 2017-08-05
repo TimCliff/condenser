@@ -103,16 +103,6 @@ yarn add sequelize
 yarn add mysql2
 ```
 
-#### Add an env var for the database in your shell:
-
-`touch ~/.bash_profile`
-
-Add 1 line:
-`export SDC_DATABASE_URL="mysql://root:password@localhost/steemit_dev"`
-
-Then run:
-`source ~/.bash_profile`
-
 #### Install Tarantool - Production Only
 
 OS X:
@@ -146,34 +136,6 @@ yarn start
 ```
 
 It will take a few moments to launch. Once it says "Application started on port ####", you now have your development front end running at localhost:####, connected to the main public steem blockchain. You don't need to run ```steemd``` locally, by default you will connect to ```ws://node.steem.ws```.  Use your regular account name and credentials to login -- there is no separate dev login.
-
-#### Style Guides
-
-##### File naming and location
-
-- Prefer CamelCase js and jsx file names
-- Prefer lower case one word directory names
-- Keep stylesheet files close to components
-- Component's stylesheet file name should match component name
-
-##### Js & Jsx
-We are using _Airbnb JavaScript Style Guide_ with some modifications (see .eslintrc).
-Please run _eslint_ in the working directory before committing your changes and make sure you didn't introduce any new styling issues.
-
-##### CSS & SCSS
-If component requires a css rule, please use its uppercase name for the class, e.g. "Header" class for the header's root div.
-We adhere to BEM methodology with exception for Foundation classes, here is an example for the Header component:
-
-```html
-<!-- Block -->
-<ul class="Header">
-  ...
-  <!-- Element -->
-  <li class="Header__menu-item">Menu Item 1</li>
-  <!-- Element with modifier -->
-  <li class="Header__menu-item--selected">Element with modifier</li>
-</ul>
-```
 
 ### Production
 
@@ -226,11 +188,49 @@ Edit `~/condenser/.babelrc` if it doesn't look like the following:
 }
 ```
 
+Add an env var for the database in your shell:
+
+`touch ~/.bash_profile`
+
+Add 1 line to `~/.bash_profile`:
+`export SDC_DATABASE_URL="mysql://root:password@localhost/steemit_dev"`
+
+Then run:
+`source ~/.bash_profile`
+
 #### How to create a password for the root mysql account:
 
 `mysql_secure_installation`
 
 (answer all it's questions as No, with Enter key, except to add a password, use "password")
+
+## Style Guides
+
+##### File naming and location
+
+- Prefer CamelCase js and jsx file names
+- Prefer lower case one word directory names
+- Keep stylesheet files close to components
+- Component's stylesheet file name should match component name
+
+##### Js & Jsx
+We are using _Airbnb JavaScript Style Guide_ with some modifications (see .eslintrc).
+Please run _eslint_ in the working directory before committing your changes and make sure you didn't introduce any new styling issues.
+
+##### CSS & SCSS
+If component requires a css rule, please use its uppercase name for the class, e.g. "Header" class for the header's root div.
+We adhere to BEM methodology with exception for Foundation classes, here is an example for the Header component:
+
+```html
+<!-- Block -->
+<ul class="Header">
+  ...
+  <!-- Element -->
+  <li class="Header__menu-item">Menu Item 1</li>
+  <!-- Element with modifier -->
+  <li class="Header__menu-item--selected">Element with modifier</li>
+</ul>
+```
 
 ## Issues
 
