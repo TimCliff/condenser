@@ -139,11 +139,11 @@ It will take a few moments to launch. Once it says "Application started on port 
 
 #### Launch (Production)
 
-If you want to test it locally in production mode, just run the following command:
+If you want to test it locally in production mode, just run the following commands:
 
 ```bash
-yarn run build
-yarn run prod
+yarn build
+yarn production
 ```
 
 or via pm2:
