@@ -84,6 +84,7 @@ class PostFull extends React.Component {
         this.fbShare = this.fbShare.bind(this);
         this.twitterShare = this.twitterShare.bind(this);
         this.redditShare = this.redditShare.bind(this);
+        this.stumbleuponShare = this.stumbleuponShare.bind(this);
         this.linkedInShare = this.linkedInShare.bind(this);
         this.showExplorePost = this.showExplorePost.bind(this);
         this.onShowReply = () => {
@@ -181,6 +182,14 @@ class PostFull extends React.Component {
             '&url=' +
             encodeURIComponent(s.url);
         window.open('https://www.reddit.com/submit?' + q, 'Share');
+    }
+
+    stumbleuponShare(e) {
+        serverApiRecordEvent('StumbleUponShare', this.share_params.link);
+        e.preventDefault();
+        const s = this.share_params;
+        const q = 'url=' + encodeURIComponent(s.url);
+        window.open('http://www.stumbleupon.com/badge/?' + q, 'Share');
     }
 
     linkedInShare(e) {
@@ -319,6 +328,13 @@ class PostFull extends React.Component {
                 value: 'LinkedIn',
                 title: tt('postfull_jsx.share_on_linkedin'),
                 icon: 'linkedin',
+            },
+            {
+                link: '#',
+                onClick: this.stumbleuponShare,
+                value: 'StumbleUpon',
+                title: tt('postfull_jsx.share_on_stumbleupon'),
+                icon: 'stumbleupon',
             },
         ];
 

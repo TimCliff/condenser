@@ -11,6 +11,7 @@ export const icons = [
     'facebook',
     'twitter',
     'reddit',
+    'stumbleupon',
     'linkedin',
     'link',
     'logo',
